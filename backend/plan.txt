@@ -1,0 +1,35 @@
+Authentication & Authorithation
+
+Registratsiya 
+    STEP 1 - registration 
+    * fullName
+    * email
+    * password
+
+    STEP 2 - verification SMTP OTP CODE 6 DIGIT EXP: 2 MIN
+    [][][][][][] 
+    if successful -> USER SAVED DATABASE MONGODB
+
+LOGIN 
+    * email
+    * password
+
+Reset password
+    step 1 Email
+    * email 
+
+    step otp SMTP
+    [][][][][][] 
+    if success
+        new password
+
+
+
+FRONTEND 
+    Register
+    OTP
+    LOGIN 
+    RESET password
+
+
+    Dashboard
