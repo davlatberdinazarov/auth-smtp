@@ -5,11 +5,21 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const helmet = require("helmet");
 const morgan = require("morgan");
+const logger = require("./logger");
 
-app.use(morgan("common"));
+// Routes
+const authRoutes = require("./routes/auth.routes");
+
 app.use(express.json());
 app.use(helmet());
+app.use(morgan("combined", {
+  stream: {
+    write: (message) => logger.info(message.trim()),
+  }
+}));
 app.use(cors());
+
+app.use('/api', authRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)
