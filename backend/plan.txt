@@ -8,7 +8,7 @@ Registratsiya
 
     STEP 2 - verification SMTP OTP CODE 6 DIGIT EXP: 2 MIN
     [][][][][][] 
-    if successful -> USER SAVED DATABASE MONGODB
+    if successful -> USER SAVED DATABASE MONGODB ACCESS_TOKEN REFRESH_TOKEN
 
 LOGIN 
     * email
@@ -23,6 +23,13 @@ Reset password
     if success
         new password
 
+Barcha Post va Update JOI VALIDATION 
+    LOGIN ✅
+    Register step1 step2 ✅
+
+Token 
+    LOGIN
+    REGISTER 
 
 
 FRONTEND 

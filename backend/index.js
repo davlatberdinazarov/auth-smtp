@@ -9,6 +9,7 @@ const logger = require("./logger");
 
 // Routes
 const authRoutes = require("./routes/auth.routes");
+const userRoutes = require("./routes/users.route");
 
 app.use(express.json());
 app.use(helmet());
@@ -20,6 +21,7 @@ app.use(morgan("combined", {
 app.use(cors());
 
 app.use('/api', authRoutes);
+app.use('/api', userRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)

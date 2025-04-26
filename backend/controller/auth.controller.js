@@ -30,8 +30,32 @@ const login = async (req, res) => {
   }
 };
 
+// reset password step 1
+const resetPasswordStep1 = async (req, res) => {
+  const { email } = req.body;
+  try {
+    const result = await AuthService.resetPasswordStep1(email);
+    res.status(200).json(result);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
+
+// reset password step 2
+const resetPasswordStep2 = async (req, res) => {
+  const { email, code, newPassword } = req.body;
+  try {
+    const result = await AuthService.resetPasswordStep2(email, code, newPassword);
+    res.status(200).json(result);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
+
 module.exports = {
     registerStep1,
     registerStep2,
-    login
+    login,
+    resetPasswordStep1,
+    resetPasswordStep2,
 }
