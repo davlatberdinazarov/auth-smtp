@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 class TokenUtils {
   // Generate an access token
   static generateAccessToken(payload) {
-    return jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "15m" });
+    return jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "3h" });
   }
 
   // Generate a refresh token
